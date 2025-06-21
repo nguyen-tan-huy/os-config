@@ -117,4 +117,21 @@ in {
     enabled = "fcitx5";
     fcitx5.addons = with pkgs; [ fcitx5-bamboo ];
   };
+
+    # Ghi sẵn profile bamboo mỗi lần rebuild
+  environment.etc."xdg/fcitx5/profile".text = ''
+    [Groups/0]
+    Name=Default
+    Default Layout=us
+    DefaultIM=bamboo
+
+    [Groups/0/Items/0]
+    Name=bamboo
+
+    [Groups/0/Items/1]
+    Name=keyboard-us
+
+    [GroupOrder]
+    0=Default
+  '';
 }
