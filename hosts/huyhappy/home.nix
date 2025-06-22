@@ -3,79 +3,66 @@
 {
   home.username = "huyhappy";
   home.homeDirectory = "/home/huyhappy";
-  home.stateVersion = "24.05"; # Thay bằng phiên bản phù hợp
+  home.stateVersion = "25.05"; # Thay bằng phiên bản phù hợp
 
   # Sao chép các thư mục cấu hình vào ~/.config/
   home.file = {
     ".config/hypr" = {
       recursive = true;
-      source = ../../../hypr; # Đường dẫn tới thư mục hypr trong repo
+      source = ../../dotfiles/hypr;
     };
     ".config/fastfetch" = {
       recursive = true;
-      source = ../../../fastfetch;
+      source = ../../dotfiles/fastfetch;
     };
     ".config/kitty" = {
       recursive = true;
-      source = ../../../kitty;
-    };
-    ".config/Kvantum" = {
-      recursive = true;
-      source = ../../../Kvantum;
+      source = ../../dotfiles/kitty;
     };
     ".config/pulse" = {
       recursive = true;
-      source = ../../../pulse;
+      source = ../../dotfiles/pulse;
     };
     ".config/rofi" = {
       recursive = true;
-      source = ../../../rofi;
+      source = ../../dotfiles/rofi;
     };
     ".config/swappy" = {
       recursive = true;
-      source = ../../../swappy;
+      source = ../../dotfiles/swappy;
     };
     ".config/swaync" = {
       recursive = true;
-      source = ../../../swaync;
+      source = ../../dotfiles/swaync;
     };
     ".config/Thunar" = {
       recursive = true;
-      source = ../../../Thunar;
+      source = ../../dotfiles/Thunar;
     };
     ".config/wallust" = {
       recursive = true;
-      source = ../../../wallust;
+      source = ../../dotfiles/wallust;
     };
     ".config/waybar" = {
       recursive = true;
-      source = ../../../waybar;
+      source = ../../dotfiles/waybar;
     };
     ".config/wlogout" = {
       recursive = true;
-      source = ../../../wlogout;
+      source = ../../dotfiles/wlogout;
     };
     ".config/xfce4" = {
       recursive = true;
-      source = ../../../xfce4;
+      source = ../../dotfiles/xfce4;
     };
   };
 
   # Cài đặt các gói cần thiết
   home.packages = with pkgs; [
-    hyprland
-    hyprlock
-    hypridle
-    fastfetch
-    kitty
-    kvantum
     pulseaudio # Hoặc pipewire nếu dùng PipeWire
-    rofi-wayland
-    swappy
     swaynotificationcenter
-    thunar
+    xfce.thunar
     wallust
-    waybar
     wlogout
     xfce.xfce4-settings
   ];

@@ -20,6 +20,9 @@ in {
     libsForQt5.qtstyleplugin-kvantum networkmanagerapplet nwg-displays nwg-look
     nvtopPackages.full pamixer pavucontrol playerctl polkit_gnome libsForQt5.qt5ct
     kdePackages.qt6ct kdePackages.qtwayland kdePackages.qtstyleplugin-kvantum
+
+    home-manager
+
     rofi-wayland slurp swappy swaynotificationcenter swww unzip wallust
     tree
     wl-clipboard wlogout xarchiver yad yt-dlp google-chrome jetbrains.idea-ultimate

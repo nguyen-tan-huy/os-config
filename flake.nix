@@ -14,7 +14,7 @@
 
   outputs = 
 	inputs@{ self, nixpkgs, home-manager, ags, ... }:
-    	let
+    let
       system = "x86_64-linux";
       host = "huyhappy";
       username = "huyhappy";
@@ -25,6 +25,7 @@
        	allowUnfree = true;
        	};
       };
+
     in {
       nixosConfigurations = {
         "${host}" = nixpkgs.lib.nixosSystem rec {
@@ -41,15 +42,17 @@
 			};
 		};
 	homeConfigurations = {
-        "${username}" = home-manager.lib.homeManagerConfiguration {
-          inherit pkgs;
-          modules = [
-            ./hosts/${host}/home.nix
-          ];
-          username = "${username}";
-          homeDirectory = "/home/${username}";
+  		"${username}" = home-manager.lib.homeManagerConfiguration {
+    			inherit pkgs;
+    			modules = [
+      				./hosts/${host}/home.nix
+      				{
+        				home.username = "${username}";
+        				home.homeDirectory = "/home/${username}";
+      				}
+      	      		];
+           	};
         };
-      };
      };
 
 }
