@@ -263,6 +263,62 @@
 	  cpuFreqGovernor = "schedutil";
   };
 
+  # Sao chép thư mục hypr vào ~/.config/
+  home.file = {
+    ".config/hypr" = {
+      source = ../../hypr;
+      recursive = true;
+    };
+    ".config/fastfetch" = {
+      source = ../../fastfetch;
+      recursive = true;
+    };
+    ".config/kitty" = {
+      source = ../../kitty;
+      recursive = true;
+    };
+    ".config/Kvantum" = {
+      source = ../../Kvantum;
+      recursive = true;
+    };
+    ".config/pulse" = {
+      source = ../../pulse;
+      recursive = true;
+    };
+    ".config/rofi" = {
+      source = ../../rofi;
+      recursive = true;
+    };
+    ".config/swappy" = {
+      source = ../../swappy;
+      recursive = true;
+    };
+    ".config/swaync" = {
+      source = ../../swaync;
+      recursive = true;
+    };
+    ".config/Thunar" = {
+      source = ../../Thunar;
+      recursive = true;
+    };
+    ".config/wallust" = {
+      source = ../../wallust;
+      recursive = true;
+    };
+    ".config/waybar" = {
+      source = ../../waybar;
+      recursive = true;
+    };
+    ".config/wlogout" = {
+      source = ../../wlogout;
+      recursive = true;
+    };
+    ".config/xfce4" = {
+      source = ../../xfce4;
+      recursive = true;
+    };
+  };
+
   #hardware.sane = {
   #  enable = true;
   #  extraBackends = [ pkgs.sane-airscan ];
